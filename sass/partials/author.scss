@@ -1,0 +1,15 @@
+.author
+{
+	display: table;
+	border-spacing: $gutter;
+
+	p, .author-pic
+	{
+		display: table-cell;
+	}
+
+	.author-pic
+	{
+		border-radius: 50%;
+	}
+}

@@ -1,0 +1,42 @@
+body
+{
+	display: block;
+	max-width: 960px;
+
+	margin: 0 auto;
+}
+
+div
+{
+	margin: $gutter 0;
+}
+
+a
+{
+	color: $red;
+}
+
+hr
+{
+	clear: both;
+}
+
+article
+{
+	padding: $gutter;
+}
+
+.well
+{
+	padding: 10px 15px;
+
+	background-color: GREY;
+	color: WHITE;
+
+	border-radius: 5px;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+	text-transform: uppercase;
+}

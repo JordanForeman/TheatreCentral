@@ -21,14 +21,16 @@ hr
 	clear: both;
 }
 
-article
+h1,h2,h3,h4,h5,h6
 {
-	padding: $gutter;
+	text-transform: uppercase;
 }
 
 .well
 {
 	padding: 10px 15px;
+
+	font-size: .85em;
 
 	background-color: GREY;
 	color: WHITE;
@@ -36,7 +38,10 @@ article
 	border-radius: 5px;
 }
 
-h1,h2,h3,h4,h5,h6
-{
-	text-transform: uppercase;
-}
+// #main-wrapper
+// {
+// 	width: 720px;
+// 	max-width: 95%;
+
+// 	margin: 0 auto;
+// }

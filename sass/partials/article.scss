@@ -1,0 +1,56 @@
+.articles
+{
+	display: table-cell;
+}
+
+.articles-row
+{
+	display: table-row;
+}
+
+article
+{
+	display: table-cell;
+	padding: $gutter;
+
+	font-size: .95em;
+
+	.single
+	{
+		display: block;
+		max-width: 100%;
+	}
+
+	.article-title
+	{
+		display: inline-block;
+		margin-bottom: $gutter;
+		padding: 5px $gutter;
+
+		background-color: BLACK;
+		color: WHITE;
+	}
+
+	a.article-title
+	{
+		text-decoration: none;
+
+		&:hover
+		{
+			color: BLACK;
+			background-color: transparent;
+		}
+	}
+
+	.single
+	{
+
+	}
+}
+
+.single-post
+{
+	width: 720px;
+	max-width: 100%;
+	margin: 0 auto;
+}

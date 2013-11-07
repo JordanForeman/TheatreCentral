@@ -36,8 +36,22 @@ header
 		left: -1px; right: -1px;
 		bottom: 0;
 
+		
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 		font-size: .8em;
 		font-weight: 300;
+		text-transform: uppercase;
+
+		&.fixed
+		{
+			position: fixed;
+			top: 0;
+
+			.nav
+			{
+				border-bottom: 2px solid RED;
+			}
+		}
 
 		.nav
 		{
@@ -58,16 +72,16 @@ header
 
 				line-height: 45px;
 
-				background-color: $red;
+				background-color: white;
 				text-align: center;
 
 				&:hover, &.active
 				{
-					background-color: WHITE;
+					background-color: $red;
 
 					a
 					{
-						color: $red;
+						color: WHITE;
 					}
 				}
 
@@ -75,9 +89,27 @@ header
 				{
 					display: block;
 					height: 100%; width: 100%;
-					color: WHITE;
+					color: $red;
 
 					text-decoration: none;
+				}
+
+				.subNav
+				{
+					display: none;
+					width: 100%;
+					padding: 0; margin: 0;
+
+					position: absolute;
+					left: 1px; right: 0px;
+
+					background-color: $red;
+
+					li
+					{
+						display: inline;
+						text-align: left;
+					}
 				}
 			}
 		}

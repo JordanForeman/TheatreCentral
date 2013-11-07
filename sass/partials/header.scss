@@ -36,7 +36,6 @@ header
 		left: -1px; right: -1px;
 		bottom: 0;
 
-		
 		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 		font-size: .8em;
 		font-weight: 300;
@@ -45,7 +44,9 @@ header
 		&.fixed
 		{
 			position: fixed;
-			top: 0;
+			top: 0; bottom: auto;
+
+			height: 45px;
 
 			.nav
 			{

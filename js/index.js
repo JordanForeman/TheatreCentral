@@ -47,12 +47,17 @@
 		navMouseOverHandler: function(event){
 			var tab = event.target;
 
-			//TODO: subnav isn't being found properly. Fix that
-			var subNav = tab.querySelector('.subNav');
+			var subNav = tab.nextSibling;
 
 			if (subNav)
 			{
-				console.log('Subnav!');
+
+				while (isWhitespace(subNav))
+				{
+					subNav = subNav.nextSibling;
+				}
+
+				addClass(subNav, 'shown');
 			}
 
 			var nav = document.querySelector('nav');
@@ -69,6 +74,19 @@
 			removeClass(event.target, 'active');
 			var original = document.querySelector('.thisPageTab');
 			addClass(original, 'active');
+
+			var subNav = event.target.nextSibling;
+
+			if (subNav)
+			{
+
+				while (isWhitespace(subNav))
+				{
+					subNav = subNav.nextSibling;
+				}
+
+				removeClass(subNav, 'shown');
+			}
 		}
 	};
 
@@ -97,6 +115,16 @@
 			elem.className = newClass.replace(/^\s+|\s+$/g, '');
 		}
 	};
+
+	/*====================================
+
+		Helpers
+
+	====================================*/
+
+	function isWhitespace(node) {
+		return node.nodeType == 3 && /^\s*$/.test(node.data);
+	}
 
 	init();
 

@@ -71,8 +71,6 @@ header
 				display: table-cell;
 				height: 45px; max-height: 45px;
 
-				line-height: 45px;
-
 				background-color: white;
 				text-align: center;
 
@@ -93,23 +91,47 @@ header
 					color: $red;
 
 					text-decoration: none;
+
+					line-height: 45px;
 				}
 
 				.subNav
 				{
 					display: none;
 					width: 100%;
-					padding: 0; margin: 0;
+					padding: 15px 10px; margin: 0;
 
 					position: absolute;
 					left: 1px; right: 0px;
 
 					background-color: $red;
 
+					&.shown, &:hover
+					{
+						display: block;
+					}
+
 					li
 					{
-						display: inline;
+						display: block;
+						height: auto;
+
 						text-align: left;
+						background-color: RED;
+
+						a
+						{
+							display: inline;
+
+							line-height: 1.8em;
+
+							border-bottom: 1px dotted WHITE;
+
+							&:hover
+							{
+								border-bottom: 0;
+							}
+						}
 					}
 				}
 			}
